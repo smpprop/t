@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drawing App</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      color: white;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+    }
+    #toolbar {
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      width: 100px;
+      background-color: black;
+    }
+    #toolbar * {
+      margin-bottom: 6px;
+    }
+    #toolbar label {
+      font-size: 12px;
+    }
+    #toolbar input, #toolbar button {
+      width: 100%;
+    }
+    #toolbar button {
+      background-color: darkblue;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      padding: 2px;
+    }
+    canvas {
+      flex: 1;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <div id="toolbar">
+      <h1>Draw</h1>
+      <label for="stroke">Stroke</label>
+      <input type="color" id="stroke" value="#ffffff">
+      <label for="lineWidth">Line Width</label>
+      <input type="number" id="lineWidth" value="5">
+      <button id="clear">Clear</button>
+    </div>
+    <canvas id="drawing-board"></canvas>
+  </section>
+
+  <script>
+    const canvas = document.getElementById('drawing-board');
+    const ctx = canvas.getContext('2d');
+    const toolbar = document.getElementById('toolbar');
+
+    let isPainting = false;
+    let lineWidth = 5;
+
+    // Set canvas size
+    function resizeCanvas() {
+      canvas.width = window.innerWidth - toolbar.offsetWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Handle toolbar
+    toolbar.addEventListener('click', (e) => {
+      if (e.target.id === 'clear') {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    });
+
+    toolbar.addEventListener('change', (e) => {
+      if (e.target.id === 'stroke') {
+        ctx.strokeStyle = e.target.value;
+      }
+      if (e.target.id === 'lineWidth') {
+        lineWidth = e.target.value;
+      }
+    });
+
+    canvas.addEventListener('mousedown', (e) => {
+      isPainting = true;
+      ctx.beginPath();
+      ctx.moveTo(e.offsetX, e.offsetY);
+    });
+
+    canvas.addEventListener('mouseup', () => {
+      isPainting = false;
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (!isPainting) return;
+      ctx.lineWidth = lineWidth;
+      ctx.lineCap = 'round';
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+    });
+  </script>
+</body>
+</html>
