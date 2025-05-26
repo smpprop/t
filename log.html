@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <style>body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color: aqua;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main {
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
+
+
+h1 {
+    color: white;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: aqua;
+    font-weight: bold;
+    background-color: black;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    border-top-color:black ;
+    color: white;
+}
+
+button{
+    padding: 10px; 
+margin-top: 15px; 
+margin-bottom: 15px; 
+border: none; 
+box-shadow: 7px 2px 9px gray;  
+color: aqua; 
+cursor: pointer; 
+width: 30%; 
+font-size: 16px; 
+background-color:black; 
+display: flex; 
+justify-content: left; 
+align-items: left; 
+}
+
+.button:hover{
+    background:#00bbff; 
+	letter-spacing:0.50em; 
+	box-shadow: -5px -5px 30px #00ddff; 
+}</style>
+</head>
+<body>
+    <div class = "main">
+        <h1>Login</h1>
+        <form>
+            <label for="first">Username:</label>
+            <input type="text" id="first" name="first" placeholder="Enter Username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit" class="button">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
