@@ -1,87 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Composite</title>
+<title>Composite</title>
 </head>
 <body>
-	<table border="1" align="center">
-		<tr>
-			<td>
-				<canvas id="can0" width="120" height="120"></canvas>
-				<div id="lab0"></div>
-			</td>
-			
-			<td>
-				<canvas id="can1" width="120" height="120"></canvas>
-				<div id="lab1"></div>
-			</td>
-			
-			<td>
-				<canvas id="can2" width="120" height="120"></canvas>
-				<div id="lab2"></div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-				<canvas id="can3" width="120" height="120"></canvas>
-				<div id="lab3"></div>
-			</td>
-			
-			<td>
-				<canvas id="can4" width="120" height="120"></canvas>
-				<div id="lab4"></div>
-			</td>
-			
-			<td>
-				<canvas id="can5" width="120" height="120"></canvas>
-				<div id="lab5"></div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-				<canvas id="can6" width="120" height="120"></canvas>
-				<div id="lab6"></div>
-			</td>
-			
-			<td>
-				<canvas id="can7" width="120" height="120"></canvas>
-				<div id="lab7"></div>
-			</td>
-			
-			<td>
-				<canvas id="can8" width="120" height="120"></canvas>
-				<div id="lab8"></div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-				<canvas id="can9" width="120" height="120"></canvas>
-				<div id="lab9"></div>
-			</td>
-			
-			<td>
-				<canvas id="can10" width="120" height="120"></canvas>
-				<div id="lab10"></div>
-			</td>
-			
-			<td>
-				<canvas id="can11" width="120" height="120"></canvas>
-				<div id="lab11"></div>
-			</td>
-		</tr>
-		
-	</table>
-	
-	<script>
-		arr = ['source-over','source-in','source-out','source-atop',
-				'destination-over','destination-in','destination-out',
-				'destination-atop','lighter','darker','copy','xor'
-		];
+<table border="1" align="center">
+<tr>
+<td>
+<canvas id="can0" width="120" height="120"></canvas>
+<div id="lab0"></div>
+</td>		
+<td>
+<canvas id="can1" width="120" height="120"></canvas>
+<div id="lab1"></div>
+</td>			
+<td>
+<canvas id="can2" width="120" height="120"></canvas>
+<div id="lab2"></div>
+</td>
+</tr>
+<tr>
+<td>
+<canvas id="can3" width="120" height="120"></canvas>
+<div id="lab3"></div>
+</td>
+<td>
+<canvas id="can4" width="120" height="120"></canvas>
+<div id="lab4"></div>
+</td>
+<td>
+<canvas id="can5" width="120" height="120"></canvas>
+<div id="lab5"></div>
+</td>
+</tr>
+<tr>
+<td>
+<canvas id="can6" width="120" height="120"></canvas>
+<div id="lab6"></div>
+</td>
+<td>
+<canvas id="can7" width="120" height="120"></canvas>
+<div id="lab7"></div>
+</td>
+<td>
+<canvas id="can8" width="120" height="120"></canvas>
+<div id="lab8"></div>
+</td>
+</tr>
+<tr>
+<td>
+<canvas id="can9" width="120" height="120"></canvas>
+<div id="lab9"></div>
+</td>
+<td>
+<canvas id="can10" width="120" height="120"></canvas>
+<div id="lab10"></div>
+</td>			
+<td>
+<canvas id="can11" width="120" height="120"></canvas>
+<div id="lab11"></div>
+</td>
+</tr>
+</table>
+<script>
+	arr = ['source-over','source-in','source-out','source-atop',
+	       'destination-over','destination-in','destination-out',
+         	'destination-atop','lighter','darker','copy','xor'
+	];
 		
 		for(var i = 0; i < arr.length; i++){
 			document.getElementById("lab"+i).innerHTML = arr[i];
@@ -97,8 +82,7 @@
 			ctx.fillStyle="mediumblue";
 			ctx.arc(75,75,35,0, Math.PI * 2);
 			ctx.fill();
-		}
-				
-	</script>
+		}			
+</script>
 </body>
 </html>
