@@ -1,0 +1,136 @@
+<html>  
+    <head>
+        <title>College Website</title>
+        <style>
+            header h1{
+                text-align: center;
+                font-weight: 800;
+                color: blue;
+            }
+            
+        </style></head>
+    <body>
+        <header>
+            <h1>Welcome To BBHC College</h1>
+        </header>
+        <nav>
+            <a href="course.html">Courses</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="container">
+            <section>
+                <article>
+                    <h2>Latest News</h2>
+                    <p>Admission for 2025 batch are now open Apply now to book your 
+seat
+                        in the top college
+                    </p>
+                </article>
+                
+            </section>
+            <aside>
+                <h2>Quick facts</h2>
+                <p>Rank among top 10 colleges</p>
+                <p>100% placement record</p>
+                <p>art,sprts and Research lab</p>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; 2025 bbhc college All rights reserved</p>
+        </footer>
+    </body>
+ </html>
+ course.html
+-----------
+<html>
+    <head>
+        <title>College Website</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome To BBHC College</h1>
+        </header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div class="container">
+            <section>
+                <article>
+                    <h2>Available courses</h2>
+                    <ol>
+                        <li>BCA</li>
+                        <li>BCOM</li>
+                        <li>BSC</li>
+                        <li>BBA</li>
+                    </ol>
+                </article>
+                </section>
+            <aside>
+                <h2>Admission Open</h2>
+                <p>Apply before last date</p>
+            </aside>
+            </div>
+            <footer>
+                <p>
+                    &copy;2025 bbhc college all rights reserved
+                </p>
+            </footer>
+            </body>
+            </html>
+ ----facilities.html---------------
+<html>
+    <head>
+        <title>College Website</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome To BBHC College</h1>
+        </header>
+        <nav>
+            <a href="course.html">Courses</a>
+            <a href="index.html">Home</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div>
+            <p>The facilities offered in the college</p>
+            <ol>
+                <li>lift system</li>
+                <li>Highly facilitated Lab</li>
+                <li>Experienced lecturer</li>
+            </ol>
+        </div>
+        <footer>
+            <p>&copy; 2025 BBHC all rights approved</p>
+        </footer>
+        </body>
+        </html>
+ ---contact.html---
+<html>
+    <head>
+        <title>College Website</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome To BBHC College</h1>
+        </header>
+        <nav>
+            <a href="course.html">Courses</a>
+            <a href="index.html">Home</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+        <div>
+            <p>The facilities offered in the college</p>
+            <ol>
+                <li>lift system</li>
+                <li>Highly facilitated Lab</li>
+                <li>Experienced lecturer</li>
+            </ol>
+        </div>
+        <footer>
+            <p>&copy; 2025 BBHC all rights approved</p>
+</footer>
+ </body>
+ </html>
